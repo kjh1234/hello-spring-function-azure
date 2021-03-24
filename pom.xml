@@ -26,10 +26,10 @@
         <azure.functions.maven.plugin.version>1.9.2</azure.functions.maven.plugin.version>
 
         <!-- customize those two properties. The functionAppName should be unique across Azure -->
-        <functionResourceGroup>my-spring-function-resource-group</functionResourceGroup>
-        <functionAppName>my-spring-function</functionAppName>
+        <functionResourceGroup>function-tf-jenkins</functionResourceGroup>
+        <functionAppName>inno-func-app</functionAppName>
 
-        <functionAppRegion>westeurope</functionAppRegion>
+        <functionAppRegion>koreacentral</functionAppRegion>
         <stagingDirectory>${project.build.directory}/azure-functions/${functionAppName}</stagingDirectory>
         <start-class>com.example.DemoApplication</start-class>
         <spring.boot.wrapper.version>1.0.26.RELEASE</spring.boot.wrapper.version>
@@ -123,8 +123,8 @@
                     <appName>${functionAppName}</appName>
                     <region>${functionAppRegion}</region>
                     <runtime>
-                        <os>linux</os>
-                        <javaVersion>11</javaVersion>
+                        <os>windows</os>
+                        <javaVersion>8</javaVersion>
                     </runtime>
                     <appSettings>
                         <!-- Run Azure Function from package file by default -->
